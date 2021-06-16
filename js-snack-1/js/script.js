@@ -29,7 +29,7 @@ const lighterBike = bicycles[indexArrObj];
 
 //** destructuring */
 const {name, weigth} = lighterBike;
-console.log(name, weigth);
+
 //**template literal */
 document.getElementById('lighter-bike').innerHTML = 
     `
