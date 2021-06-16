@@ -16,11 +16,26 @@ const bicycles = [
 ];
 
 let weigthMin = bicycles[0].weigth;
+let indexArrObj;
 
 for(let i = 1; i < bicycles.length; i++){
     if(bicycles[i].weigth < weigthMin){
         weigthMin = bicycles[i].weigth;
+        indexArrObj = i;
     }
 }
 
-console.log(weigthMin);
+const lighterBike = bicycles[indexArrObj];
+
+//** destructuring */
+const {name, weigth} = lighterBike;
+console.log(name, weigth);
+//**template literal */
+document.getElementById('lighter-bike').innerHTML = 
+    `
+        <ul>
+            <li>Name: ${name}</li>
+            <li>Weigth: ${weigth}</li>
+        </ul>
+    `;
+
